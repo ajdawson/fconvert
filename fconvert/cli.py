@@ -63,5 +63,7 @@ def main(name, value_type, help, converter, input_converter=None):
         print(errmsg, file=sys.stderr)
         print("  use -h or --help for help", file=sys.stderr)
         return 1
+    except KeyboardInterrupt:
+        return 2
     else:
         return 0
